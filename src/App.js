@@ -31,22 +31,44 @@ function App() {
 
       <section className="space-y-4 max-w-3xl mx-auto">
         <h2 className="text-3xl font-semibold">Contact</h2>
-        <form name="contact" method="POST" data-netlify="true" className="space-y-4">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className="space-y-4"
+        >
           <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
 
           <div>
             <label className="block">Name</label>
-            <input type="text" name="name" required className="w-full p-2 border border-gray-300 rounded" />
+            <input
+              type="text"
+              name="name"
+              required
+              className="w-full p-2 border border-gray-300 rounded"
+            />
           </div>
 
           <div>
             <label className="block">Email</label>
-            <input type="email" name="email" required className="w-full p-2 border border-gray-300 rounded" />
+            <input
+              type="email"
+              name="email"
+              required
+              className="w-full p-2 border border-gray-300 rounded"
+            />
           </div>
 
           <div>
             <label className="block">Message</label>
-            <textarea name="message" rows="4" required className="w-full p-2 border border-gray-300 rounded"></textarea>
+            <textarea
+              name="message"
+              rows="4"
+              required
+              className="w-full p-2 border border-gray-300 rounded"
+            ></textarea>
           </div>
 
           <button
@@ -62,4 +84,3 @@ function App() {
 }
 
 export default App;
-// Trigger redeploy on Netlify
