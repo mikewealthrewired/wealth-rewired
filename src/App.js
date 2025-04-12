@@ -1,4 +1,5 @@
 import React from "react";
+import GuidedVisualizationForm from "./components/GuidedVisualizationForm";
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
         <p className="text-xl max-w-xl mx-auto">
           Rewire your money mindset and build lasting confidence—because real wealth starts in the mind.
         </p>
+        <a href="#guided-visualization" className="mt-6 inline-block text-white underline text-lg font-semibold">
+          Try the Guided Visualization Exercise
+        </a>
       </header>
 
       {/* About Section */}
@@ -37,6 +41,40 @@ function App() {
             <h3 className="text-xl font-semibold mb-2">Resources</h3>
             <p>Access tools, scripts, and templates to support your rewiring journey.</p>
           </a>
+        </div>
+      </section>
+
+      {/* Who It's For Section */}
+      <section className="py-20 px-6 bg-gray-50 text-gray-800" id="who">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Who It's For</h2>
+          <p className="text-lg mb-8">
+            Wealth Rewired is built for people who know they’re capable of more—but feel like something is holding them back.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 text-left text-gray-700">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">This is for you if...</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>You’ve said “I’m not good with money” more than once.</li>
+                <li>You’ve tried budgeting, but it never sticks.</li>
+                <li>You feel anxious, guilty, or avoidant when it comes to money.</li>
+                <li>You make decent income but still live paycheck to paycheck.</li>
+                <li>You know what to do… but struggle to follow through.</li>
+                <li>You’re tired of starting over and want a system that lasts.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">What you're looking for...</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Peace and clarity around money—finally.</li>
+                <li>A step-by-step process to change the way you think, feel, and act with money.</li>
+                <li>A way to grow wealth without relying on willpower or hustle.</li>
+                <li>A shift from surviving to building real, lasting abundance.</li>
+                <li>To feel confident, in control, and excited about your financial future.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -83,6 +121,13 @@ function App() {
         </div>
       </section>
 
+      {/* Guided Visualization Form */}
+      <section className="py-20 bg-gray-50" id="guided-visualization">
+        <div className="max-w-4xl mx-auto px-6">
+          <GuidedVisualizationForm />
+        </div>
+      </section>
+
       {/* Call-to-Action */}
       <section className="py-20 bg-indigo-700 text-white text-center" id="contact">
         <h2 className="text-3xl font-bold mb-4">Ready to Rewire Your Wealth?</h2>
@@ -95,6 +140,22 @@ function App() {
         </a>
       </section>
 
+      {/* Bonus CTA */}
+      <section className="py-16 px-6 bg-blue-100 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Break Free from Financial Stress?
+        </h2>
+        <p className="text-lg text-gray-700 mb-6">
+          Let’s build your custom wealth system—without overwhelm, confusion, or burnout.
+        </p>
+        <a
+          href="#contact"
+          className="inline-block bg-indigo-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-800 transition"
+        >
+          Book Your Free Strategy Call
+        </a>
+      </section>
+
       {/* Footer */}
       <footer className="py-6 text-center text-sm text-gray-500 bg-gray-100">
         © {new Date().getFullYear()} Wealth Rewired. All rights reserved.
@@ -104,3 +165,4 @@ function App() {
 }
 
 export default App;
+
