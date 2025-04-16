@@ -1,26 +1,31 @@
 import React, { useState } from "react";
+import Home from "./pages/Home";
+import Resources from "./pages/Resources";
+// import other tabs...
 
-const Tabs = ({ tabs }) => {
-  const [activeTab, setActiveTab] = useState(tabs[0].label);
+const Tabs = () => {
+  const [activeTab, setActiveTab] = useState("Resources");
+
+  const renderTab = () => {
+    switch (activeTab) {
+      case "Home":
+        return <Home />;
+      case "Resources":
+        return <Resources />;
+      // add others...
+      default:
+        return <Home />;
+    }
+  };
 
   return (
-    <div className="w-full">
-      <div className="flex space-x-4 border-b mb-6">
-        {tabs.map((tab) => (
-          <button
-            key={tab.label}
-            onClick={() => setActiveTab(tab.label)}
-            className={`pb-2 font-semibold border-b-2 transition-all ${
-              activeTab === tab.label
-                ? "border-indigo-600 text-indigo-600"
-                : "border-transparent text-gray-500 hover:text-indigo-500"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-      <div>{tabs.find((t) => t.label === activeTab).content}</div>
+    <div>
+      <nav className="flex justify-center bg-blue-600 p-4 space-x-6 text-white">
+        <button onClick={() => setActiveTab("Home")}>Home</button>
+        <button onClick={() => setActiveTab("Resources")}>Resources</button>
+        {/* add others... */}
+      </nav>
+      <div className="p-8">{renderTab()}</div>
     </div>
   );
 };
