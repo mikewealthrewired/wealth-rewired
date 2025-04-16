@@ -31,25 +31,20 @@ const Tabs = () => {
     }
   };
 
-  const tabStyle = (tabName) =>
-    `px-4 py-2 rounded-md transition font-semibold ${
-      activeTab === tabName
-        ? "bg-white text-indigo-700"
-        : "text-white hover:text-indigo-200"
-    }`;
-
   return (
     <div>
-      <nav className="flex flex-wrap justify-center bg-indigo-700 p-4 gap-3">
-        <button onClick={() => setActiveTab("Home")} className={tabStyle("Home")}>Home</button>
-        <button onClick={() => setActiveTab("WealthRewiredPath")} className={tabStyle("WealthRewiredPath")}>The Path</button>
-        <button onClick={() => setActiveTab("Resources")} className={tabStyle("Resources")}>Resources</button>
-        <button onClick={() => setActiveTab("Worksheets")} className={tabStyle("Worksheets")}>Worksheets</button>
-        <button onClick={() => setActiveTab("VisualizationTools")} className={tabStyle("VisualizationTools")}>Visualization</button>
-        <button onClick={() => setActiveTab("FAQ")} className={tabStyle("FAQ")}>FAQ</button>
-        <button onClick={() => setActiveTab("Contact")} className={tabStyle("Contact")}>Contact</button>
+      {/* Nav bar */}
+      <nav className="flex flex-wrap justify-center bg-indigo-700 text-white py-4 space-x-4 text-sm sm:text-base">
+        <button onClick={() => setActiveTab("Home")} className="hover:underline">Home</button>
+        <button onClick={() => setActiveTab("WealthRewiredPath")} className="hover:underline">Wealth Rewired Path</button>
+        <button onClick={() => setActiveTab("Resources")} className="hover:underline">Resources</button>
+        <button onClick={() => setActiveTab("Worksheets")} className="hover:underline">Worksheets</button>
+        <button onClick={() => setActiveTab("VisualizationTools")} className="hover:underline">Visualization Tools</button>
+        <button onClick={() => setActiveTab("FAQ")} className="hover:underline">FAQ</button>
+        <button onClick={() => setActiveTab("Contact")} className="hover:underline">Contact</button>
       </nav>
 
+      {/* Active tab content */}
       <main className="p-6">{renderTab()}</main>
     </div>
   );
