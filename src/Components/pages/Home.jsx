@@ -1,6 +1,5 @@
 // src/Components/pages/Home.jsx
 import React from "react";
-import Tabs from "../Tabs";
 
 export default function Home() {
   return (
@@ -37,11 +36,6 @@ export default function Home() {
           <h3 className="font-bold text-xl mb-2">Resources</h3>
           <p>Access tools, scripts, and templates to support your rewiring journey.</p>
         </div>
-      </section>
-
-      {/* Tab Section */}
-      <section className="mt-8">
-        <Tabs />
       </section>
     </div>
   );
