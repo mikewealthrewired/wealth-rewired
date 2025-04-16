@@ -4,22 +4,35 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
+    <meta name="theme-color" content="#D1E8FF" />
+    <meta name="description" content="Rewire your money mindset. Gain confidence, clarity, and control with Wealth Rewired." />
 
-    <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-
-    <!-- Manifest for Progressive Web App -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- Google Fonts: Poppins (bold) & Lato (body) -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <!-- Google Fonts: Lato for body, Poppins for headings -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Wealth Rewired</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!-- Netlify Hidden Forms for Detection -->
+    <form name="contact" netlify hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="guided-visualization" netlify hidden>
+      <input type="hidden" name="form-name" value="guided-visualization" />
+      <textarea name="experience"></textarea>
+    </form>
   </body>
 </html>
