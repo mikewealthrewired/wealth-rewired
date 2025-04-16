@@ -7,9 +7,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-white text-center py-16 bg-gradient-to-r from-blue-600 to-indigo-700">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Rewire your money mindset and build lasting confidence—
+          Rewire your money mindset and build lasting confidence
         </h1>
-        <p className="text-xl">because real wealth starts in the mind.</p>
+        <p className="text-xl">Because real wealth starts in the mind.</p>
       </section>
 
       {/* About Section */}
