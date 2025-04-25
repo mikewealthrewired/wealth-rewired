@@ -1,5 +1,6 @@
 // src/Components/pages/Resources.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Resources() {
   return (
@@ -15,9 +16,9 @@ export default function Resources() {
           <p className="mb-4">
             Discover worksheets and scripts to help you understand and transform your financial identity.
           </p>
-          <a href="#worksheets" className="text-indigo-600 underline font-semibold">
+          <Link to="/worksheets" className="text-indigo-600 underline font-semibold">
             Explore Worksheets →
-          </a>
+          </Link>
         </div>
 
         <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
@@ -25,9 +26,9 @@ export default function Resources() {
           <p className="mb-4">
             Access interactive exercises designed to shift your mindset and align your actions with wealth-building goals.
           </p>
-          <a href="#visualization" className="text-indigo-600 underline font-semibold">
+          <Link to="/visualization-tools" className="text-indigo-600 underline font-semibold">
             Try Visual Tools →
-          </a>
+          </Link>
         </div>
 
         <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
@@ -35,9 +36,9 @@ export default function Resources() {
           <p className="mb-4">
             Read up on topics like breaking scarcity beliefs, creating new habits, and finding financial peace.
           </p>
-          <a href="#blog" className="text-indigo-600 underline font-semibold">
+          <Link to="/blog" className="text-indigo-600 underline font-semibold">
             Go to Blog →
-          </a>
+          </Link>
         </div>
 
         <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
@@ -45,9 +46,9 @@ export default function Resources() {
           <p className="mb-4">
             Get plug-and-play budget planners, habit trackers, and investment strategy sheets.
           </p>
-          <a href="#downloads" className="text-indigo-600 underline font-semibold">
+          <Link to="/worksheets" className="text-indigo-600 underline font-semibold">
             Download Templates →
-          </a>
+          </Link>
         </div>
       </div>
     </div>
