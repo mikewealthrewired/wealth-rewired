@@ -1,17 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import your pages
-import Home from "./pages/Home";
-import Resources from "./pages/Resources";
-import Contact from "./pages/Contact";
-import FAQ from "./pages/FAQ";
-import StartHere from "./pages/StartHere";
-import Worksheets from "./pages/Worksheets";
-import VisualizationTools from "./pages/VisualizationTools";
-import WealthRewiredPath from "./pages/WealthRewiredPath";
-import Blog from "./Blog"; // assuming it's in src
-import Tabs from "./Components/Tabs"; // adjust if moved
+// ✅ Corrected paths — all point to ./Components/pages
+import Home from "./Components/pages/Home";
+import Resources from "./Components/pages/Resources";
+import Contact from "./Components/pages/Contact";
+import FAQ from "./Components/pages/FAQ";
+import StartHere from "./Components/pages/StartHere";
+import Worksheets from "./Components/pages/Worksheets";
+import VisualizationTools from "./Components/pages/VisualizationTools";
+import WealthRewiredPath from "./Components/pages/WealthRewiredPath";
+
+// Blog is in src/
+import Blog from "./Blog";
+
+// Tabs is in Components
+import Tabs from "./Components/Tabs";
 
 function App() {
   return (
@@ -33,4 +37,3 @@ function App() {
 }
 
 export default App;
-
